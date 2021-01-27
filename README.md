@@ -1,2 +1,102 @@
 # inflix
+
+![Requires.io](https://img.shields.io/requires/github/BumpyBill/inflix)
+
 Inflix is an easy-to-use Discord API wrapper for Deno.
+
+## Instillation
+
+```ts
+import Inflix from "https://deno.land/x/inflix/index.ts";
+```
+
+## Usage
+
+### Example
+
+```ts
+import Inflix from "https://deno.land/x/inflix/index.ts";
+
+const client = new Inflix.Client();
+client.login("Your Token Here");
+
+client.on("ready", () => {
+  console.log("Bot Online");
+});
+```
+
+### Documentation
+
+#### Events
+
+- ###### guild_create
+- ###### message_create
+- ###### message_update
+- ###### ready
+- ###### typing_start
+
+#### Client
+
+##### Methods
+
+- ###### login
+  ```ts
+  @param token string
+  ```
+
+##### Properties
+
+- ###### user
+  ```ts
+  @type ClientUser
+  ```
+
+#### Client User
+
+##### Properties
+
+- ###### username
+  ```ts
+  @type string
+  ```
+- ###### discriminator
+  ```ts
+  @type string | number
+  ```
+- ###### verified
+  ```ts
+  @type boolean
+  ```
+- ###### id
+  ```ts
+  @type string
+  ```
+- ###### flags
+  ```ts
+  @type number
+  ```
+- ###### email
+  ```ts
+  @type string
+  ```
+- ###### bot
+  ```ts
+  @type boolean
+  ```
+- ###### avatar
+  ```ts
+  @type string
+  ```
+
+## License
+
+![License](https://img.shields.io/github/license/BumpyBill/inflix)
+
+Copyright (c) 2021 BumpyBill
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:

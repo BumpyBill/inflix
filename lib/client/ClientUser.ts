@@ -1,12 +1,12 @@
 export default class ClientUser {
   constructor(
-    username: string,
-    discriminator: number,
-    verified: boolean,
-    id: string,
-    flags: number,
-    email: string,
-    bot: boolean,
-    avatar: string
+    public username: string,
+    public discriminator: number,
+    public verified: boolean,
+    public id: string,
+    public flags: number,
+    public email: string,
+    public bot: boolean,
+    public avatar: string
   ) {}
 }

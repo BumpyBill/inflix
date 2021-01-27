@@ -8,8 +8,8 @@ import { Heartbeat, Identify } from "../constants/Payloads.ts";
 import Client from "../client/Client.ts";
 
 export default class WebSocketManager {
-  private socket!: WebSocket;
-  private interval: number = 0;
+  socket!: WebSocket;
+  interval: number = 0;
 
   constructor(private client: Client) {}
 
