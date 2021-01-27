@@ -1,6 +1,6 @@
-import MessageEmbed from "../models/MessageEmbed.ts";
+import MessageEmbed from "./MessageEmbed.ts";
 
 export default interface MessageData {
-  tts: boolean;
-  embed: MessageEmbed;
+  tts?: boolean;
+  embed?: MessageEmbed;
 }
