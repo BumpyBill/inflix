@@ -3,9 +3,9 @@ import EventEmitter from "https://deno.land/std@0.51.0/node/events.ts";
 import ClientUser from "./ClientUser.ts";
 
 export default class Client extends EventEmitter {
-  ws: WebSocketManager = new WebSocketManager(this);
-  _user!: ClientUser;
-  token!: string;
+  private ws: WebSocketManager = new WebSocketManager(this);
+  private _user!: ClientUser;
+  public token!: string;
 
   login(token: string) {
     this.ws.connect(token);
