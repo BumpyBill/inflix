@@ -29,6 +29,12 @@ client.on("ready", () => {
 
 #### Events
 
+```ts
+<client>.on(<Event>, (<Argument(s)>) => {
+  // Code
+})
+```
+
 - ###### guild_create
   ```ts
   @param guild Guild
@@ -49,6 +55,14 @@ client.on("ready", () => {
   ```
 
 #### Client
+
+```ts
+const client = new Inflix.Client();
+
+// Or with debug mode
+
+const client = new Inflix.Client(true);
+```
 
 ##### Methods
 
