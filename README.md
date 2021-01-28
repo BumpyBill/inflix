@@ -30,10 +30,23 @@ client.on("ready", () => {
 #### Events
 
 - ###### guild_create
+  ```ts
+  @param guild Guild
+  ```
 - ###### message_create
+  ```ts
+  @param message Message
+  ```
 - ###### message_update
+  ```ts
+  @param message Message
+  ```
 - ###### ready
+
 - ###### typing_start
+  ```ts
+  @param user User
+  ```
 
 #### Client
 
