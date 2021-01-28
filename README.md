@@ -60,8 +60,14 @@ client.on("ready", () => {
 ##### Properties
 
 - ###### user
+
   ```ts
   @type ClientUser
+  ```
+
+- ###### debug
+  ```ts
+  @type boolean
   ```
 
 #### Client User

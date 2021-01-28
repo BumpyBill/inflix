@@ -7,6 +7,10 @@ export default class Client extends EventEmitter {
   private _user!: ClientUser;
   public token!: string;
 
+  constructor(public debug: boolean = false) {
+    super();
+  }
+
   login(token: string) {
     this.ws.connect(token);
 

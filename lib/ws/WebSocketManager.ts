@@ -29,13 +29,16 @@ export default class WebSocketManager {
 
         switch (op) {
           case OPCODE.ZERO:
+            if (this.client.debug) console.log("Event dispatched");
             break;
           case OPCODE.TEN:
             const { heartbeat_interval } = payload.d;
             this.interval = this.heartbeat(heartbeat_interval);
             await this.identify(token);
+            if (this.client.debug) console.log("Sending heartbeat");
             break;
           case OPCODE.ELEVEN:
+            if (this.client.debug) console.log("Heartbeat received");
             break;
         }
 
@@ -43,6 +46,8 @@ export default class WebSocketManager {
           try {
             const { default: module } = await import(`../handlers/${event}.ts`);
             module(this.client, payload);
+
+            if (this.client.debug) console.log(`Event triggered: ${event}`);
           } catch (e) {
             console.log(e);
             console.log("An unknown event has triggered.");
